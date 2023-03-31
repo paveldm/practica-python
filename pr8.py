@@ -1,5 +1,4 @@
-def main(s1, s2=''):
-    s = s1 + s2
+def main(s):
     s = s.replace("\n", '')
     s = s.replace(' ', '')
     arr = s.split('.')
@@ -7,7 +6,6 @@ def main(s1, s2=''):
     arr1 = []
     newStr2 = ''
     arr2 = []
-    resStr = '{'
     for i in range(0, len(arr)):
         for j in range(len(arr[i]) - 3, 0, -1):
             if arr[i][j] == '>':
@@ -27,3 +25,4 @@ def main(s1, s2=''):
     for i in range(0, len(arr) - 1):
         newDict[arr1[i]] = arr2[i]
     return newDict
+print(main("[option qube_396|> reed; ].[ option qubeed|> bizaxe; ]. [ option\narbeus |>xein; ]. [ option quenqu |>bequxe_263; ]."))
