@@ -23,16 +23,7 @@ def main(s1, s2=''):
                 newStr2 = ''
                 break
             newStr2 += arr[i][j]
+    newDict = {}
     for i in range(0, len(arr) - 1):
-        if len(arr) > 3:
-            resStr += '\'' + arr1[i] + '\'' + ': ' + '\'' + \
-                      arr2[i] + '\'' + ',' + '\n '
-        else:
-            resStr += '\'' + arr1[i] + '\'' + ': ' + '\'' + \
-                      arr2[i] + '\'' + ', '
-    if len(arr) <= 3:
-        resStr = resStr[:-2]
-    else:
-        resStr = resStr[:-3]
-    return resStr + '}'
-print(main("[ option ceon_23 |> rexe_654; ]. [ option esle |> raso; ]."))
+        newDict[arr1[i]] = arr2[i]
+    return newDict
